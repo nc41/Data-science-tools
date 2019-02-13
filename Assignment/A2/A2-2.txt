@@ -1,0 +1,136 @@
+%%sql
+-- your implementation of page rank goes here
+DROP TABLE IF EXISTS pre_score;
+CREATE TEMP TABLE pre_score(
+    id INTEGER,
+    score double precision Default 0
+);
+
+DROP TABLE IF EXISTS now_score;
+CREATE TEMP TABLE now_score(
+    id INTEGER,
+    score double precision Default 0
+);
+
+DROP TABLE IF EXISTS temp_score;
+CREATE TEMP TABLE temp_score(
+    id INTEGER,
+    score double precision Default 0
+);
+
+DROP TABLE IF EXISTS outRefCount;
+CREATE TEMP TABLE outRefCount(
+    id INTEGER,
+    counts double precision
+);
+
+DROP TABLE IF EXISTS sinkNode;
+CREATE TEMP TABLE sinkNode(
+    id INTEGER
+);
+
+DROP TABLE IF EXISTS new_Edges;
+CREATE TEMP TABLE new_Edges(
+    id INTEGER,
+    refId INTEGER
+);
+
+CREATE OR REPLACE FUNCTION getScores() RETURNS void AS 
+$$ 
+DECLARE 
+numNode double precision;
+constantD double precision;
+frontCon double precision;
+difN double precision;
+difO double precision;
+sinkN double precision;
+
+BEGIN
+    constantD := 0.85;
+    
+    SELECT count(*) into numNode from nodes;
+    
+    frontCon := (1.0-constantD)/numNode;
+    
+    INSERT INTO pre_score(id)
+    select id
+    from nodes;
+
+    INSERT INTO now_score(id)
+    select id
+    from nodes;
+    
+    INSERT INTO temp_score(id)
+    select id
+    from nodes;
+    
+    UPDATE pre_score set score = 1.0/numNode WHERE score = 0;
+    UPDATE now_score set score = 1.0/numNode WHERE score = 0;
+    UPDATE temp_score set score = 1.0/numNode WHERE score = 0;
+    
+    INSERT INTO new_Edges(id, refId)
+    select id, refId
+    from edges;
+    
+    INSERT INTO sinkNode(id)
+    select n.id
+    from nodes n
+    where n.id not in(
+        select e.id
+        from edges e
+    );
+    
+    INSERT INTO new_Edges(id, refId)
+    select s.id, n.Id
+    from sinkNode s, nodes n
+    where s.id != n.id;
+    
+    INSERT INTO outRefCount(id, counts)
+    select id, count(*)
+    from new_edges
+    group by id;
+    
+    while True
+    LOOP
+        UPDATE temp_score set score = score/outRefCount.counts
+        from outRefCount
+        where outRefCount.id = temp_score.id;
+        
+        UPDATE now_score set score = n.newScores
+        from(
+            select e.refID,  frontCon + constantD*SUM(tmp.score) AS newScores
+            from new_Edges AS e
+                INNER JOIN temp_score AS tmp
+                on   e.id = tmp.id
+            group by e.refId
+        ) AS n
+        where n.refID = now_score.id;
+       
+        select sum(score) into difN from now_score;
+        select sum(score) into difO from pre_score;
+        
+        if abs(difN - difO) < 0.01 THEN
+            EXIT;
+        END IF;
+        
+        UPDATE pre_score set score = n.score
+        from now_score n
+        where pre_score.id = n.id;
+        
+        UPDATE temp_score set score = n.score
+        from now_score n
+        where temp_score.id = n.id;
+    END LOOP;
+
+    
+END;
+$$ LANGUAGE plpgsql;
+
+select*
+from getScores();
+
+
+select*
+from now_score
+order by score DESC
+limit 10;

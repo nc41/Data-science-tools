@@ -1,0 +1,219 @@
+[('applicant', 11393), ('and', 2), ('attack', 3107), ('protein', 433), ('car', 4017)]
+('Task1:', [('applicant', 11393), ('and', 2), ('attack', 3107), ('protein', 433), ('car', 4017)])
+
+obesity
+obese
+movi
+morbidly
+orlistat
+hyperphagia
+ewl
+snacking
+sadi
+bariatric
+overweight
+plication
+tssc
+malabsorptive
+wize
+tiffin
+kj
+worksite
+almonds
+sibutramine
+childcare
+bmi
+agb
+jib
+vbg
+philips
+kindergarten
+kilograms
+teenagers
+weight
+seminars
+polycystic
+overeating
+inflating
+roux
+ovary
+abstract
+hypocaloric
+satiation
+mentors
+hypothalamic
+outdoors
+pizza
+tripled
+jejunal
+biliopancreatic
+kcal
+aaw
+soda
+lsg
+
+
+
+
+('WeightW:', u'obese')
+('WeightW:', u'obesity')
+('WeightW:', u'bmi')
+('WeightW:', u'weight')
+('WeightW:', u'morbid')
+('WeightW:', u'morbidly')
+('WeightW:', u'overweight')
+('WeightW:', u'eating')
+('WeightW:', u'ghrelin')
+('WeightW:', u'bariatric')
+('WeightW:', u'lifestyle')
+('WeightW:', u'dietitian')
+('WeightW:', u'epidemic')
+('WeightW:', u'banding')
+('WeightW:', u'orlistat')
+('WeightW:', u'dispersion')
+('WeightW:', u'carroll')
+('WeightW:', u'calmm')
+('WeightW:', u'buffet')
+('WeightW:', u'sleeve')
+('WeightW:', u'leicester')
+('WeightW:', u'labs')
+('WeightW:', u'culprits')
+('WeightW:', u'alimentary')
+('WeightW:', u'transection')
+('WeightW:', u'depots')
+('WeightW:', u'alarming')
+('WeightW:', u'ameliorated')
+('WeightW:', u'anovulation')
+('WeightW:', u'binge')
+('WeightW:', u'advice')
+('WeightW:', u'ramifications')
+('WeightW:', u'leptin')
+('WeightW:', u'intragastric')
+('WeightW:', u'graders')
+('WeightW:', u'hypothesizes')
+('WeightW:', u'fructose')
+('WeightW:', u'tv')
+('WeightW:', u'lean')
+('WeightW:', u'metabolically')
+('WeightW:', u'endocannabinoids')
+('WeightW:', u'jejunum')
+('WeightW:', u'television')
+('WeightW:', u'employers')
+('WeightW:', u'enteroendocrine')
+('WeightW:', u'glycated')
+('WeightW:', u'sws')
+('WeightW:', u'anecdotally')
+('WeightW:', u'pyy')
+('WeightW:', u'fullness')
+
+
+
+
+F1:0.600522193211
+(115, 81, 5281, 72, 0.6005221932114883, 0.9724274644080014)
+
+('WeightW:', u'obesity')
+('WeightW:', u'obese')
+('WeightW:', u'morbidly')
+('WeightW:', u'movi')
+('WeightW:', u'overweight')
+('WeightW:', u'orlistat')
+('WeightW:', u'bariatric')
+('WeightW:', u'hyperphagia')
+('WeightW:', u'ewl')
+('WeightW:', u'snacking')
+('WeightW:', u'sadi')
+('WeightW:', u'plication')
+('WeightW:', u'malabsorptive')
+('WeightW:', u'tssc')
+('WeightW:', u'worksite')
+('WeightW:', u'bmi')
+('WeightW:', u'kj')
+('WeightW:', u'wize')
+('WeightW:', u'tiffin')
+('WeightW:', u'almonds')
+('WeightW:', u'childcare')
+('WeightW:', u'sibutramine')
+('WeightW:', u'weight')
+('WeightW:', u'kilograms')
+('WeightW:', u'teenagers')
+('WeightW:', u'agb')
+('WeightW:', u'philips')
+('WeightW:', u'vbg')
+('WeightW:', u'jib')
+('WeightW:', u'kindergarten')
+('WeightW:', u'seminars')
+('WeightW:', u'overeating')
+('WeightW:', u'polycystic')
+('WeightW:', u'roux')
+('WeightW:', u'inflating')
+('WeightW:', u'hypocaloric')
+('WeightW:', u'abstract')
+('WeightW:', u'ovary')
+('WeightW:', u'satiation')
+('WeightW:', u'hypothalamic')
+('WeightW:', u'mentors')
+('WeightW:', u'pizza')
+('WeightW:', u'tripled')
+('WeightW:', u'kcal')
+('WeightW:', u'outdoors')
+('WeightW:', u'soda')
+('WeightW:', u'jejunal')
+('WeightW:', u'banding')
+('WeightW:', u'biliopancreatic')
+('WeightW:', u'iom')
+
+
+
+('WeightW:', u'obesity')
+('WeightW:', u'obese')
+('WeightW:', u'overweight')
+('WeightW:', u'morbidly')
+('WeightW:', u'bariatric')
+('WeightW:', u'movi')
+('WeightW:', u'orlistat')
+('WeightW:', u'hyperphagia')
+('WeightW:', u'bmi')
+('WeightW:', u'snacking')
+('WeightW:', u'ewl')
+('WeightW:', u'weight')
+('WeightW:', u'malabsorptive')
+('WeightW:', u'sadi')
+('WeightW:', u'plication')
+('WeightW:', u'worksite')
+('WeightW:', u'almonds')
+('WeightW:', u'kilograms')
+('WeightW:', u'tssc')
+('WeightW:', u'kj')
+('WeightW:', u'wize')
+('WeightW:', u'childcare')
+('WeightW:', u'tiffin')
+('WeightW:', u'teenagers')
+('WeightW:', u'sibutramine')
+('WeightW:', u'roux')
+('WeightW:', u'agb')
+('WeightW:', u'kindergarten')
+('WeightW:', u'philips')
+('WeightW:', u'seminars')
+('WeightW:', u'jib')
+('WeightW:', u'vbg')
+('WeightW:', u'overeating')
+('WeightW:', u'tripled')
+('WeightW:', u'satiation')
+('WeightW:', u'hypothalamic')
+('WeightW:', u'polycystic')
+('WeightW:', u'hypocaloric')
+('WeightW:', u'pizza')
+('WeightW:', u'inflating')
+('WeightW:', u'kcal')
+('WeightW:', u'ovary')
+('WeightW:', u'iom')
+('WeightW:', u'abstract')
+('WeightW:', u'soda')
+('WeightW:', u'mentors')
+('WeightW:', u'banding')
+('WeightW:', u'resistin')
+('WeightW:', u'outdoors')
+('WeightW:', u'schoolchildren')
+
+
